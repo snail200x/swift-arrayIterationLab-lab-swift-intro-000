@@ -16,7 +16,7 @@
 // write your code here
 
 
-
+var cart:[String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -26,8 +26,8 @@
 // write your code here
 
 
-
-
+var numberList: [Int]
+numberList = [1,2,3,4,5,6,7,8,9,10]
 
 
 
@@ -36,6 +36,9 @@
  */
 // write your code here
 
+for oneNumber in numberList {
+    print(oneNumber)
+}
 
 
 
@@ -48,6 +51,9 @@
 // write your code here
 
 
+for item in cart {
+    print ("item: \(item)")
+}
 
 
 
@@ -58,6 +64,13 @@
  */
 // write your code here
 
+func printItem(list:[String]) {
+    for item in list {
+        print ("item: \(item)")
+    }
+}
+
+printItem(list: cart)
 
 
 
@@ -70,7 +83,19 @@
 // write your code here
 
 
+var peopleList:[String] = ["Michael", "David", "Dongdong"]
 
+func greetingPeopleInList(peopleList:[String]) {
+    for person in peopleList {
+        if person == "Michael" {
+            print("Top of the morning \(person)")
+        } else {
+            print("Good morning \(person)")
+        }
+    }
+}
+
+greetingPeopleInList(peopleList: peopleList)
 
 
 
@@ -79,8 +104,19 @@
  */
 // write your code here
 
+func numberFilter(numberList:[Int]) -> [Int] {
+    var resNumberList:[Int] = []
+    for number in numberList {
+        if number < 50 {
+            resNumberList.append(number)
+        }
+    }
+    return resNumberList
+}
 
+let numberlist:[Int] = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
+print(numberFilter(numberList: numberlist))
 
 
 
